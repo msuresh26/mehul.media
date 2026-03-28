@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;800&amp;family=Noto+Serif:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#faf9fe",
+              "on-surface": "#e6e4ec",
+              "tertiary-fixed": "#eeedf3",
+              "error-dim": "#bb5551",
+              "on-tertiary-fixed": "#45464a",
+              "primary": "#c3c7cd",
+              "on-secondary-container": "#aec1d7",
+              "surface-tint": "#c3c7cd",
+              "primary-fixed-dim": "#d1d5db",
+              "on-secondary-fixed": "#2f4153",
+              "inverse-primary": "#5b5f65",
+              "error-container": "#7f2927",
+              "on-surface-variant": "#abaab1",
+              "outline": "#75757b",
+              "error": "#ee7d77",
+              "outline-variant": "#47474d",
+              "on-tertiary-container": "#56565b",
+              "inverse-on-surface": "#565557",
+              "secondary-container": "#2b3d4f",
+              "secondary-fixed-dim": "#c3d6ed",
+              "surface-container-lowest": "#000000",
+              "on-secondary-fixed-variant": "#4b5d70",
+              "on-background": "#e6e4ec",
+              "primary-dim": "#b5b9bf",
+              "background": "#0e0e10",
+              "primary-fixed": "#dfe3e9",
+              "surface-dim": "#0e0e10",
+              "secondary": "#8da0b5",
+              "surface-bright": "#2b2c32",
+              "secondary-fixed": "#d1e4fb",
+              "on-tertiary-fixed-variant": "#626267",
+              "on-primary-fixed": "#3b4045",
+              "on-primary": "#3c4146",
+              "on-error": "#490106",
+              "primary-container": "#43474c",
+              "surface-container-highest": "#25252b",
+              "surface-container": "#19191d",
+              "tertiary-dim": "#e0dfe4",
+              "surface": "#0e0e10",
+              "surface-variant": "#25252b",
+              "tertiary-fixed-dim": "#e0dfe4",
+              "on-secondary": "#0e2232",
+              "on-primary-fixed-variant": "#575c61",
+              "on-tertiary": "#5e5f63",
+              "surface-container-high": "#1f1f24",
+              "surface-container-low": "#131316",
+              "on-primary-container": "#cdd1d7",
+              "on-error-container": "#ff9993",
+              "inverse-surface": "#fcf8fb",
+              "secondary-dim": "#8da0b5",
+              "tertiary-container": "#ebeaf0"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Noto Serif"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(71, 71, 77, 0.5); }
+        
+        .film-grain {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .cinematic-vignette {
+            background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.4) 100%);
+        }
+
+        .lens-hover:hover img {
+            filter: brightness(1.1) contrast(1.05);
+            transform: scale(1.02);
+            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-headline selection:bg-primary selection:text-on-primary overflow-x-hidden">
+<div class="film-grain"></div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/60 backdrop-blur-xl border-b border-zinc-100/10 flex justify-between items-center px-12 py-8 w-full">
+<div class="text-xl font-light tracking-[0.4em] text-zinc-100 uppercase">AUTEUR</div>
+<div class="hidden md:flex gap-12">
+<a class="font-['Inter'] uppercase tracking-[0.2em] text-[10px] font-medium text-zinc-100 border-b border-zinc-100 pb-1" href="#">Film</a>
+<a class="font-['Inter'] uppercase tracking-[0.2em] text-[10px] font-medium text-zinc-400 hover:text-zinc-100 transition-colors duration-500" href="#">Frames</a>
+<a class="font-['Inter'] uppercase tracking-[0.2em] text-[10px] font-medium text-zinc-400 hover:text-zinc-100 transition-colors duration-500" href="#">Process</a>
+<a class="font-['Inter'] uppercase tracking-[0.2em] text-[10px] font-medium text-zinc-400 hover:text-zinc-100 transition-colors duration-500" href="#">Contact</a>
+</div>
+<button class="text-zinc-300">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover filter grayscale brightness-50 contrast-125" data-alt="dramatic low angle shot of brutalist concrete architecture with sharp shadows and cold moody cinematic lighting in a nolan style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfRoJ06yWXZ5oFh0578jaR-O1195grakYor4Ye6WTMVXjHd0QoBihA9p0cR34ZVzboBwjPc6l3MslMPPamPWKrqcGruJIS3ve44grp0J5BoW-XBWy6_pk6SkNDAr_KCyL-2ewzAooa7Vd3ArbDzx6wucaaA6DlubDdUv8CeIhOeXWNPN3P3lpVvy2LqXHHJizYnyDxgghLW8OrPEtqxlVCkFUxnXUEqKyAh-CALbKAKpCX48PmIIXVi0aEEsAce0UqvmImN0AULyqY"/>
+<div class="absolute inset-0 cinematic-vignette"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<p class="font-label text-[10px] uppercase tracking-[0.6em] text-secondary mb-8 opacity-80">Cinematography &amp; Visual Arts</p>
+<h1 class="text-6xl md:text-8xl font-light tracking-tighter text-tertiary mb-12">Architecture of <span class="font-body italic">Light</span>.</h1>
+<div class="w-24 h-px bg-outline-variant mx-auto mb-12"></div>
+<p class="font-body italic text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                Visual storytelling defined by structural precision, atmospheric depth, and the relentless pursuit of the perfect frame.
+            </p>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-40">
+<span class="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+<div class="w-px h-16 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</header>
+<main class="relative z-10 bg-surface">
+<!-- Film Section -->
+<section class="py-32 px-6 md:px-12 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-12 gap-y-12 md:gap-y-0 items-end mb-24">
+<div class="col-span-12 md:col-span-6">
+<span class="font-label text-[10px] uppercase tracking-[0.4em] text-outline mb-4 block">Selected Works</span>
+<h2 class="text-4xl md:text-5xl font-light tracking-tight text-primary">Film <span class="text-on-surface-variant italic font-body text-3xl ml-4">01</span></h2>
+</div>
+<div class="col-span-12 md:col-span-6 md:text-right">
+<p class="font-body text-on-surface-variant max-w-md ml-auto italic">Capturing the motion of stillness and the narrative of the unseen.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+<div class="relative group overflow-hidden bg-surface-container-low aspect-[16/9] lens-hover">
+<img class="w-full h-full object-cover grayscale transition-all duration-1000" data-alt="atmospheric cinematic shot of a lone figure walking through a foggy pine forest at dawn cold blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4f_BskBEVwaCltek9Yf1TZX0zbAISI_bKE2SjRLwDMGpU_0n_fj3oR8ZO5VbUMMOiX6WDFV1eCm98otvzOObms_RZ3Gkg52s02pL61uZZ1os9ZSEa_PcP61EtFbmp9fAWFPjP8wJGeWwKcxWpJ8PCxu3aW807Z0NXMXcDgbxSApWJf5aWTpeW4JNUEs5J-HavrEu_Psgo_xDHgFFU6d-LiUsYiH675tl2DwHzs9RUFRMda6Mb8rgze7HxJibfDid87fIAYrXaPRQ0"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
+<span class="text-[10px] uppercase tracking-widest text-primary mb-2">Short Film</span>
+<h3 class="text-2xl font-light tracking-widest">THE SILENT NORTH</h3>
+</div>
+</div>
+<div class="relative group overflow-hidden bg-surface-container-low aspect-[16/9] lens-hover">
+<img class="w-full h-full object-cover grayscale transition-all duration-1000" data-alt="cinematic close up of a vintage movie camera on a professional film set with soft bokeh lights in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8YZ3nJxZbecMoEO09Stie9BQ4sNiI1e3ors-1_Xojrf7gL7ZBQ2AiZYAwb1Pb9POeb26JUcX70q9cbL83gsHF8qJsw35aHyWmzIqMHA2T9gL3l2djWctz0RWKVRWq5Um_eNrQmyHVTihrtH9nFmJ0Z-zBTHRwLXr3iWNNIk33sE0Y2x5SAm7w_cxt8kgxgq3S_A6IwKBLiYtsYSihqUkc_CGJ0FOR7uNSx1vtLR4leDnr3NwpyoUtQe0B4UTwRWZvUN9tw38-V71L"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
+<span class="text-[10px] uppercase tracking-widest text-primary mb-2">Commercial</span>
+<h3 class="text-2xl font-light tracking-widest">MONOLITH SPECTACLE</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Frames Section (Asymmetric Bento) -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+<div class="flex justify-between items-baseline mb-24">
+<h2 class="text-4xl md:text-5xl font-light tracking-tight text-primary">Frames <span class="text-on-surface-variant italic font-body text-3xl ml-4">02</span></h2>
+<a class="text-[10px] uppercase tracking-[0.3em] text-outline hover:text-primary transition-colors" href="#">View Archive</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 aspect-[4/3] bg-surface-container lens-hover overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="high contrast black and white architectural photography of modern stairs and geometric shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1veVcg0CDRY14RNlHcOTxH31EMrHPtMVCawMOhaDQeUXw4hIiRS-FnIPLFzLWGYzH_ZC1R_dxFF0htXuAgPC8Si6uRRP38Y1Bkn18outJvVz_iUuYLTs5lJvAsax-51iPbUZTKYmTKLcUJSD9qxifvlLOXxBaO3AA__U3GBNePwHmKwod9qm4ODxFb53NvOgyMxZNezFnh2W_Ao2QYhuOVVIcspplWGfunEVkNL5DZQNz2gErnJxCJX19WZi7fCWs5cpoQWkUM-Ki"/>
+</div>
+<div class="aspect-[4/5] bg-surface-container lens-hover overflow-hidden mt-12 md:mt-24">
+<img class="w-full h-full object-cover grayscale" data-alt="minimalist portrait of a person in profile lit by a single harsh light source creating deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwawzonLao1NwFj7MaSjyk_kZfZdb47b2rZhe57XXTDGWf35wK7AbebXgzUCBoHJlh4FmHqrAVmdbSsMvkkX0mbGM_F60UpXOLv1jQh8nPHY-zjIrL4aOKDZWiQI9TrZoiEGKtl5yY7hfvrAJg4qtK1BHeYIzwQSmt8B3HXvjk3OsWirqeGGLgmMKq783t1BFndPVQXWHO3vej4Z9IfTl7SOygYA1HPvMGUQ1MmBMFmZ0-9Enyu6xktQH78PZhWAz8PbZuFirkmeLp"/>
+</div>
+<div class="aspect-square bg-surface-container lens-hover overflow-hidden -mt-12 md:-mt-48">
+<img class="w-full h-full object-cover grayscale" data-alt="low key photography of a classic luxury car interior with focus on the leather steering wheel and chrome details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0K2__4YXy9-ER9AycVt6Kb07XZPbFn713KxZr0c1aOl4JGRVc9ddxq2IYy568ZHu9kvuLlt-xJMhrK9s86-IjCfMOltuugjeVHsvy32Nv1oEtM7C_xMwu1Y4CFodfu88-0ba9MODFpgdLeIoHMLTTymke3e4pH-xeYht6Lu0PjEOpP9QR6dzc04heL7WbDogt4zlLJxvbhEbUh7uPHxmHl4SZkVNmPfWIj_h5g8mXYe7NNzZTuhnaBXqiiBjsIVs29lbDlmdRj7er"/>
+</div>
+<div class="md:col-span-2 aspect-[21/9] bg-surface-container lens-hover overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="wide cinematic landscape of jagged mountain peaks at night under a starry sky with deep indigo tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCToQ3nBPwhm_fcXcsYVuM9_ONVUoJwfNyWfqbVXG2RMdYC3xuNkaAs51hcUcgPiNTueF3dqpH5qHSNoQa1G2J_oz92PQDmg-snfByu04WULqy_nrg0nQOxChFlZ7vhZ7E9P3JFeV32AZcYIHP2o3k96jkLFWtO-C9oZ9zetQm5BwyU1O_IibUaRodIYu2fuYLffkv9Kr4Eii6ZKMJB8CYK-RYYBP8BVlZn-K06iJWZDZI0W5HKYXtMAjAP8BT4oTihezwlNGR8177a"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Coming Soon / Future Disciplines -->
+<section class="py-48 px-6 text-center">
+<div class="max-w-4xl mx-auto">
+<span class="material-symbols-outlined text-4xl text-outline mb-12 block" data-icon="blur_on">blur_on</span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div class="opacity-30 hover:opacity-100 transition-opacity duration-1000">
+<h3 class="text-[10px] uppercase tracking-[0.5em] text-outline mb-4">Discipline</h3>
+<h4 class="text-3xl font-light tracking-tighter mb-4">Graphics</h4>
+<p class="font-body italic text-sm text-on-surface-variant">Exploring the architectural structure of digital typography and generative form.</p>
+<span class="inline-block mt-8 text-[9px] uppercase tracking-[0.2em] border border-outline-variant px-4 py-2">Coming Soon</span>
+</div>
+<div class="opacity-30 hover:opacity-100 transition-opacity duration-1000">
+<h3 class="text-[10px] uppercase tracking-[0.5em] text-outline mb-4">Discipline</h3>
+<h4 class="text-3xl font-light tracking-tighter mb-4">Game Design</h4>
+<p class="font-body italic text-sm text-on-surface-variant">The intersection of cinematic pacing and interactive spatial narrative.</p>
+<span class="inline-block mt-8 text-[9px] uppercase tracking-[0.2em] border border-outline-variant px-4 py-2">In Development</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Statement Section -->
+<section class="py-64 px-6 md:px-12 border-t border-outline-variant/15">
+<div class="max-w-screen-xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-8">
+<blockquote class="font-body italic text-4xl md:text-6xl text-primary leading-tight">
+                            "A film is a series of architectural decisions made in the service of emotion."
+                        </blockquote>
+</div>
+<div class="md:col-span-4 md:text-right">
+<div class="w-full aspect-square bg-surface-container lens-hover overflow-hidden mb-8">
+<img class="w-full h-full object-cover grayscale" data-alt="dark atmospheric shot of an empty theater with a single beam of light hitting the red velvet seats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBphE08IiKBAvQEoStrnt0eLctAjrvOlYFIRjOY_RGy-PhiUytCvoy9KP1IaGjt1YFOCmJ2Vwsn7I2ZyZ1jzWNJihSofkaqTHC0yDE6mMPYXfwXfJ8VTEo2G0RSIZ7IEkMHagAkirXr_W01QwCpY5rBLnEJ6XyQn622HwHu3SQpyZ6kFIibdMbjxxfIUFea2mbWfJDDYRFIa6vZHgzEcQZn2fsig39Anw_1VhcdLamI5hDxRmVTJL7me5TangsFkJ4-uVN52m4S7Y1v"/>
+</div>
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary">The Auteur Principle</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 w-full border-t border-zinc-100/5 mt-24">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-20 max-w-screen-2xl mx-auto">
+<div>
+<div class="text-zinc-300 font-['Inter'] tracking-tighter text-2xl mb-8 uppercase">AUTEUR</div>
+<p class="font-['Noto_Serif'] italic text-sm tracking-wide text-zinc-500 max-w-xs">
+                    Building visual worlds through the lens of architectural intention. 
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<span class="text-[10px] uppercase tracking-[0.3em] text-zinc-600 mb-2">Offices</span>
+<a class="font-['Noto_Serif'] italic text-sm tracking-wide text-zinc-600 hover:text-zinc-300 transition-colors duration-500" href="#">London</a>
+<a class="font-['Noto_Serif'] italic text-sm tracking-wide text-zinc-600 hover:text-zinc-300 transition-colors duration-500" href="#">Tokyo</a>
+<a class="font-['Noto_Serif'] italic text-sm tracking-wide text-zinc-600 hover:text-zinc-300 transition-colors duration-500" href="#">New York</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-[10px] uppercase tracking-[0.3em] text-zinc-600 mb-2">Expertise</span>
+<a class="font-['Noto_Serif'] italic text-sm tracking-wide text-zinc-600 hover:text-zinc-300 transition-colors duration-500" href="#">Cinematography</a>
+<a class="font-['Noto_Serif'] italic text-sm tracking-wide text-zinc-600 hover:text-zinc-300 transition-colors duration-500" href="#">Still Life</a>
+<a class="font-['Noto_Serif'] italic text-sm tracking-wide text-zinc-600 hover:text-zinc-300 transition-colors duration-500" href="#">Color Grading</a>
+</div>
+</div>
+<div class="md:text-right flex flex-col justify-between">
+<div>
+<span class="text-[10px] uppercase tracking-[0.3em] text-zinc-600 mb-6 block">Connect</span>
+<div class="flex gap-6 md:justify-end">
+<span class="material-symbols-outlined text-zinc-500 cursor-pointer hover:text-zinc-100 transition-colors" data-icon="camera">camera</span>
+<span class="material-symbols-outlined text-zinc-500 cursor-pointer hover:text-zinc-100 transition-colors" data-icon="mail">mail</span>
+<span class="material-symbols-outlined text-zinc-500 cursor-pointer hover:text-zinc-100 transition-colors" data-icon="videocam">videocam</span>
+</div>
+</div>
+<p class="font-['Noto_Serif'] italic text-xs tracking-wide text-zinc-600 mt-12">
+                    © MMXXIV AUTEUR. ALL RIGHTS RESERVED.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
