@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
+<html class="dark scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;800&amp;family=Noto+Serif:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://kit.fontawesome.com/db374e8f62.js" crossorigin="anonymous"></script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
       tailwind.config = {
@@ -107,8 +108,8 @@
 <div class="text-xl font-light tracking-[0.4em] text-zinc-100 uppercase">AUTEUR</div>
 <div class="hidden md:flex gap-12">
 <a class="font-['Inter'] uppercase tracking-[0.2em] text-[10px] font-medium text-zinc-100 border-b border-zinc-100 pb-1" href="#">Film</a>
-<a class="font-['Inter'] uppercase tracking-[0.2em] text-[10px] font-medium text-zinc-400 hover:text-zinc-100 transition-colors duration-500" href="#">Frames</a>
-<a class="font-['Inter'] uppercase tracking-[0.2em] text-[10px] font-medium text-zinc-400 hover:text-zinc-100 transition-colors duration-500" href="#">Process</a>
+<a class="font-['Inter'] uppercase tracking-[0.2em] text-[10px] font-medium text-zinc-400 hover:text-zinc-100 transition-colors duration-500" href="#frames">Frames</a>
+<!-- <a class="font-['Inter'] uppercase tracking-[0.2em] text-[10px] font-medium text-zinc-400 hover:text-zinc-100 transition-colors duration-500" href="#">Process</a> -->
 <a class="font-['Inter'] uppercase tracking-[0.2em] text-[10px] font-medium text-zinc-400 hover:text-zinc-100 transition-colors duration-500" href="#">Contact</a>
 </div>
 <button class="text-zinc-300">
@@ -118,12 +119,12 @@
 <!-- Hero Section -->
 <header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover filter grayscale brightness-50 contrast-125" data-alt="dramatic low angle shot of brutalist concrete architecture with sharp shadows and cold moody cinematic lighting in a nolan style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfRoJ06yWXZ5oFh0578jaR-O1195grakYor4Ye6WTMVXjHd0QoBihA9p0cR34ZVzboBwjPc6l3MslMPPamPWKrqcGruJIS3ve44grp0J5BoW-XBWy6_pk6SkNDAr_KCyL-2ewzAooa7Vd3ArbDzx6wucaaA6DlubDdUv8CeIhOeXWNPN3P3lpVvy2LqXHHJizYnyDxgghLW8OrPEtqxlVCkFUxnXUEqKyAh-CALbKAKpCX48PmIIXVi0aEEsAce0UqvmImN0AULyqY"/>
+<img class="w-full h-full object-cover filter grayscale brightness-50 contrast-125" data-alt="dramatic low angle shot of brutalist concrete architecture with sharp shadows and cold moody cinematic lighting in a nolan style" src="https://images.pixieset.com/99617389/88a8a3f25ac904e6f4f6cdf4c9686be2-xxlarge.JPG"/>
 <div class="absolute inset-0 cinematic-vignette"></div>
 </div>
 <div class="relative z-10 text-center px-6 max-w-4xl">
 <p class="font-label text-[10px] uppercase tracking-[0.6em] text-secondary mb-8 opacity-80">Cinematography &amp; Visual Arts</p>
-<h1 class="text-6xl md:text-8xl font-light tracking-tighter text-tertiary mb-12">Architecture of <span class="font-body italic">Light</span>.</h1>
+<h1 class="text-6xl md:text-8xl font-light tracking-tighter text-tertiary mb-12">Nature of <span class="font-body italic">Light</span>.</h1>
 <div class="w-24 h-px bg-outline-variant mx-auto mb-12"></div>
 <p class="font-body italic text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
                 Visual storytelling defined by structural precision, atmospheric depth, and the relentless pursuit of the perfect frame.
@@ -140,40 +141,79 @@
 <div class="grid grid-cols-12 gap-y-12 md:gap-y-0 items-end mb-24">
 <div class="col-span-12 md:col-span-6">
 <span class="font-label text-[10px] uppercase tracking-[0.4em] text-outline mb-4 block">Selected Works</span>
-<h2 class="text-4xl md:text-5xl font-light tracking-tight text-primary">Film <span class="text-on-surface-variant italic font-body text-3xl ml-4">01</span></h2>
+<h2 class="text-4xl md:text-5xl font-light tracking-tight text-primary">Film <span class="text-amber-400 italic font-body text-3xl ml-4">01</span></h2>
 </div>
 <div class="col-span-12 md:col-span-6 md:text-right">
-<p class="font-body text-on-surface-variant max-w-md ml-auto italic">Capturing the motion of stillness and the narrative of the unseen.</p>
+<!-- <p class="font-body text-on-surface-variant max-w-md ml-auto italic">Capturing the motion of stillness and the narrative of the unseen.</p> -->
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-<div class="relative group overflow-hidden bg-surface-container-low aspect-[16/9] lens-hover">
-<img class="w-full h-full object-cover grayscale transition-all duration-1000" data-alt="atmospheric cinematic shot of a lone figure walking through a foggy pine forest at dawn cold blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4f_BskBEVwaCltek9Yf1TZX0zbAISI_bKE2SjRLwDMGpU_0n_fj3oR8ZO5VbUMMOiX6WDFV1eCm98otvzOObms_RZ3Gkg52s02pL61uZZ1os9ZSEa_PcP61EtFbmp9fAWFPjP8wJGeWwKcxWpJ8PCxu3aW807Z0NXMXcDgbxSApWJf5aWTpeW4JNUEs5J-HavrEu_Psgo_xDHgFFU6d-LiUsYiH675tl2DwHzs9RUFRMda6Mb8rgze7HxJibfDid87fIAYrXaPRQ0"/>
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
-<span class="text-[10px] uppercase tracking-widest text-primary mb-2">Short Film</span>
-<h3 class="text-2xl font-light tracking-widest">THE SILENT NORTH</h3>
+  <div class="relative group overflow-hidden bg-surface-container-low aspect-[16/9] lens-hover">
+    <img class="w-full h-full object-cover grayscale transition-all duration-1000" data-alt="atmospheric cinematic shot of a lone figure walking through a foggy pine forest at dawn cold blue tones" src="https://images.pixieset.com/228716111/253265f68e0a349ae8b614ea0d790511-xxlarge.jpg"/>
+    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
+    <span class="text-[10px] uppercase tracking-widest text-primary mb-2">Short Film</span>
+    <h3 class="text-2xl font-light tracking-widest">COOKIE TIME</h3>
+      <div class="flex gap-3 py-2">
+        <a href="https://vimeo.com/782124577" class="text-[10px] uppercase tracking-widest border border-white/70 text-white px-4 py-2 hover:bg-white hover:text-black transition-colors duration-300">
+          <i class="fa-solid fa-play" aria-hidden="true"></i>
+          Watch
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="relative group overflow-hidden bg-surface-container-low aspect-[16/9] lens-hover">
+    <img class="w-full h-full object-cover grayscale transition-all duration-1000" data-alt="cinematic close up of a vintage movie camera on a professional film set with soft bokeh lights in background" src="https://images.pixieset.com/228716111/4f9da8d482a6345f8c60aa3f2c359b2b-xxlarge.png"/>
+    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
+    <span class="text-[10px] uppercase tracking-widest text-primary mb-2">Commercial</span>
+    <h3 class="text-2xl font-light tracking-widest">MIND BOUND</h3>
+      <div class="flex gap-3 py-2">
+        <a href="https://vimeo.com/921776263?share=copy" class="text-[10px] uppercase tracking-widest border border-white/70 text-white px-4 py-2 hover:bg-white hover:text-black transition-colors duration-300">
+          <i class="fa-solid fa-play" aria-hidden="true"></i>
+          Watch
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-<div class="relative group overflow-hidden bg-surface-container-low aspect-[16/9] lens-hover">
-<img class="w-full h-full object-cover grayscale transition-all duration-1000" data-alt="cinematic close up of a vintage movie camera on a professional film set with soft bokeh lights in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8YZ3nJxZbecMoEO09Stie9BQ4sNiI1e3ors-1_Xojrf7gL7ZBQ2AiZYAwb1Pb9POeb26JUcX70q9cbL83gsHF8qJsw35aHyWmzIqMHA2T9gL3l2djWctz0RWKVRWq5Um_eNrQmyHVTihrtH9nFmJ0Z-zBTHRwLXr3iWNNIk33sE0Y2x5SAm7w_cxt8kgxgq3S_A6IwKBLiYtsYSihqUkc_CGJ0FOR7uNSx1vtLR4leDnr3NwpyoUtQe0B4UTwRWZvUN9tw38-V71L"/>
-<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
-<span class="text-[10px] uppercase tracking-widest text-primary mb-2">Commercial</span>
-<h3 class="text-2xl font-light tracking-widest">MONOLITH SPECTACLE</h3>
-</div>
-</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+  <div class="relative group overflow-hidden bg-surface-container-low aspect-[16/9] lens-hover">
+    <img class="w-full h-full object-cover grayscale transition-all duration-1000" data-alt="atmospheric cinematic shot of a lone figure walking through a foggy pine forest at dawn cold blue tones" src="https://images.pixieset.com/228716111/253265f68e0a349ae8b614ea0d790511-xxlarge.jpg"/>
+    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
+    <span class="text-[10px] uppercase tracking-widest text-primary mb-2">Short Film</span>
+    <h3 class="text-2xl font-light tracking-widest">COOKIE TIME</h3>
+      <div class="flex gap-3 py-2">
+        <a href="https://vimeo.com/782124577" class="text-[10px] uppercase tracking-widest border border-white/70 text-white px-4 py-2 hover:bg-white hover:text-black transition-colors duration-300">
+          <i class="fa-solid fa-play" aria-hidden="true"></i>
+          Watch
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="relative group overflow-hidden bg-surface-container-low aspect-[16/9] lens-hover">
+    <img class="w-full h-full object-cover grayscale transition-all duration-1000" data-alt="cinematic close up of a vintage movie camera on a professional film set with soft bokeh lights in background" src="https://images.pixieset.com/228716111/4f9da8d482a6345f8c60aa3f2c359b2b-xxlarge.png"/>
+    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
+    <span class="text-[10px] uppercase tracking-widest text-primary mb-2">Commercial</span>
+    <h3 class="text-2xl font-light tracking-widest">MIND BOUND</h3>
+      <div class="flex gap-3 py-2">
+        <a href="https://vimeo.com/921776263?share=copy" class="text-[10px] uppercase tracking-widest border border-white/70 text-white px-4 py-2 hover:bg-white hover:text-black transition-colors duration-300">
+          <i class="fa-solid fa-play" aria-hidden="true"></i>
+          Watch
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 </section>
 <!-- Frames Section (Asymmetric Bento) -->
 <section class="py-32 bg-surface-container-low">
-<div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+<div id="frames" class="max-w-screen-2xl mx-auto px-6 md:px-12 scroll-mt-24">
 <div class="flex justify-between items-baseline mb-24">
-<h2 class="text-4xl md:text-5xl font-light tracking-tight text-primary">Frames <span class="text-on-surface-variant italic font-body text-3xl ml-4">02</span></h2>
+<h2 class="text-4xl md:text-5xl font-light tracking-tight text-primary">Frames <span class="text-amber-400 italic font-body text-3xl ml-4">02</span></h2>
 <a class="text-[10px] uppercase tracking-[0.3em] text-outline hover:text-primary transition-colors" href="https://mehulmedia.pixieset.com/portfolio/">View Archive</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="md:col-span-2 aspect-[4/3] bg-surface-container lens-hover overflow-hidden">
-<!-- <img class="w-full h-full object-cover grayscale" data-alt="high contrast black and white architectural photography of modern stairs and geometric shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1veVcg0CDRY14RNlHcOTxH31EMrHPtMVCawMOhaDQeUXw4hIiRS-FnIPLFzLWGYzH_ZC1R_dxFF0htXuAgPC8Si6uRRP38Y1Bkn18outJvVz_iUuYLTs5lJvAsax-51iPbUZTKYmTKLcUJSD9qxifvlLOXxBaO3AA__U3GBNePwHmKwod9qm4ODxFb53NvOgyMxZNezFnh2W_Ao2QYhuOVVIcspplWGfunEVkNL5DZQNz2gErnJxCJX19WZi7fCWs5cpoQWkUM-Ki"/> -->
-<img class="w-full h-full object-cover grayscale" data-alt="high contrast black and white architectural photography of modern stairs and geometric shadows" src="https://images.pixieset.com/99617389/88a8a3f25ac904e6f4f6cdf4c9686be2-xxlarge.JPG"/>
+<img class="w-full h-full object-cover grayscale" data-alt="high contrast black and white architectural photography of modern stairs and geometric shadows" src="https://images.pixieset.com/99617389/3c25a58b525c774296fdebb9a1ea1d54-xxlarge.JPG"/>
 </div>
 <div class="aspect-[4/5] bg-surface-container lens-hover overflow-hidden mt-12 md:mt-24">
 <img class="w-full h-full object-cover grayscale" data-alt="minimalist portrait of a person in profile lit by a single harsh light source creating deep shadows" src="https://images.pixieset.com/99617389/696a1423d3cda20910f35a40f06abd0e-xxlarge.JPG"/>
